@@ -1,0 +1,30 @@
+#Function that determines if a word or number is a palindrome
+def is_a_palindrome(sample):
+
+    #Converts the inputed word to lower case and stores it in      sample_lower
+    sample_lower = sample.lower()
+
+    #Gets the length of the sample_lower and divides it by 2
+    split_point = (len(sample_lower) / 2)
+
+    #Converts split_point into an integer and stores it in        split_point_int
+    split_point_int = int(split_point)
+
+    #Loop that iterates in the range of split_point_int and       compares the letters in sample_lower
+    for i in range(split_point_int):
+      if sample_lower[i] == sample_lower[len(sample_lower)-1]:
+        return True
+      else:
+        return False
+
+
+#User instructions
+print("Enter a word to see if it is the same forward and backwords.\nTrue will appear if it is the same, and False will appear if not. \nTo exit enter: EXIT\n")
+
+#while loop that repeat until EXIT is entered
+while True:
+  sample = str(input("Enter word or number: "))
+  if sample == "EXIT":
+    break
+  else:
+    print(is_a_palindrome(sample),"\n")
