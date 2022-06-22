@@ -1,4 +1,4 @@
-#Function that determines if a word or number is a palindrome
+#Function that determines if a word or number is a palindrome!
 def is_a_palindrome(sample):
 
     #Converts the inputed word to lower case and stores it in      sample_lower
